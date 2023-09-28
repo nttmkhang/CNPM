@@ -59,4 +59,8 @@
         End If
         Return Kq
     End Function
+
+    Private Sub MH_Nhap_lieu_doi_tuong_co_so_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
