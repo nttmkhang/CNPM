@@ -41,7 +41,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         ' 
         Th_Diem_trung_binh.Location = New Point(821, 477)
         Th_Diem_trung_binh.Name = "Th_Diem_trung_binh"
-        Th_Diem_trung_binh.Size = New Size(95, 30)
+        Th_Diem_trung_binh.Size = New Size(95, 35)
         Th_Diem_trung_binh.TabIndex = 24
         ' 
         ' Label6
@@ -49,7 +49,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Label6.AutoSize = True
         Label6.Location = New Point(659, 480)
         Label6.Name = "Label6"
-        Label6.Size = New Size(148, 25)
+        Label6.Size = New Size(182, 29)
         Label6.TabIndex = 23
         Label6.Text = "Điểm trung bình"
         ' 
@@ -57,7 +57,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         ' 
         Th_So_ngay_vang.Location = New Point(424, 480)
         Th_So_ngay_vang.Name = "Th_So_ngay_vang"
-        Th_So_ngay_vang.Size = New Size(95, 30)
+        Th_So_ngay_vang.Size = New Size(95, 35)
         Th_So_ngay_vang.TabIndex = 22
         ' 
         ' Label5
@@ -65,7 +65,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Label5.AutoSize = True
         Label5.Location = New Point(280, 480)
         Label5.Name = "Label5"
-        Label5.Size = New Size(133, 25)
+        Label5.Size = New Size(157, 29)
         Label5.TabIndex = 21
         Label5.Text = "Số ngày vắng"
         ' 
@@ -83,7 +83,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Label4.Location = New Point(280, 321)
         Label4.Name = "Label4"
-        Label4.Size = New Size(71, 25)
+        Label4.Size = New Size(86, 29)
         Label4.TabIndex = 19
         Label4.Text = "Địa chỉ"
         ' 
@@ -93,7 +93,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Th_Ngay_sinh.Format = DateTimePickerFormat.Short
         Th_Ngay_sinh.Location = New Point(424, 235)
         Th_Ngay_sinh.Name = "Th_Ngay_sinh"
-        Th_Ngay_sinh.Size = New Size(152, 30)
+        Th_Ngay_sinh.Size = New Size(152, 35)
         Th_Ngay_sinh.TabIndex = 18
         ' 
         ' Th_Gioi_tinh
@@ -102,7 +102,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Th_Gioi_tinh.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Th_Gioi_tinh.Location = New Point(839, 155)
         Th_Gioi_tinh.Name = "Th_Gioi_tinh"
-        Th_Gioi_tinh.Size = New Size(75, 29)
+        Th_Gioi_tinh.Size = New Size(90, 33)
         Th_Gioi_tinh.TabIndex = 17
         Th_Gioi_tinh.Text = "Nam"
         Th_Gioi_tinh.UseVisualStyleBackColor = True
@@ -111,7 +111,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         ' 
         Th_Ho_ten.Location = New Point(424, 155)
         Th_Ho_ten.Name = "Th_Ho_ten"
-        Th_Ho_ten.Size = New Size(211, 30)
+        Th_Ho_ten.Size = New Size(211, 35)
         Th_Ho_ten.TabIndex = 16
         ' 
         ' Label3
@@ -120,7 +120,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Label3.Location = New Point(280, 235)
         Label3.Name = "Label3"
-        Label3.Size = New Size(99, 25)
+        Label3.Size = New Size(119, 29)
         Label3.TabIndex = 15
         Label3.Text = "Ngày sinh"
         ' 
@@ -130,7 +130,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Label2.Location = New Point(280, 155)
         Label2.Name = "Label2"
-        Label2.Size = New Size(69, 25)
+        Label2.Size = New Size(83, 29)
         Label2.TabIndex = 14
         Label2.Text = "Họ tên"
         ' 
@@ -141,7 +141,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Label1.ForeColor = Color.Red
         Label1.Location = New Point(424, 53)
         Label1.Name = "Label1"
-        Label1.Size = New Size(516, 36)
+        Label1.Size = New Size(609, 40)
         Label1.TabIndex = 13
         Label1.Text = "Minh họa nhập liệu đối tượng cơ sở"
         ' 
@@ -158,7 +158,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         ' 
         ' MH_Nhap_lieu_doi_tuong_co_so
         ' 
-        AutoScaleDimensions = New SizeF(12F, 25F)
+        AutoScaleDimensions = New SizeF(14F, 29F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1200, 643)
         Controls.Add(Xl_Dong_y)
@@ -175,7 +175,7 @@ Partial Class MH_Nhap_lieu_doi_tuong_co_so
         Controls.Add(Label2)
         Controls.Add(Label1)
         Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Margin = New Padding(4, 4, 4, 4)
+        Margin = New Padding(4)
         Name = "MH_Nhap_lieu_doi_tuong_co_so"
         Text = "MH_Nhap_lieu_doi_tuong_co_so"
         ResumeLayout(False)
