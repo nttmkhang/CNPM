@@ -14,10 +14,11 @@
         Nhan_vien("Ngay_sinh") = New Date(1987, 4, 5)
         Nhan_vien("Dia_chi") = "112 Hung Vuong"
         'Ket xuat Nhan_vien vào Th_Nhan_vien (dang nhap lieu)
-        Th_Ho_ten.Text = Nhan_vien("Ho_ten")
-        Th_Gioi_tinh.Checked = Nhan_vien("Gioi_tinh")
-        Th_Ngay_sinh.Value = Nhan_vien("Ngay_sinh")
-        Th_Dia_chi.Text = Nhan_vien("Dia_chi")
+        'Th_Ho_ten.Text = Nhan_vien("Ho_ten")
+        'Th_Gioi_tinh.Checked = Nhan_vien("Gioi_tinh")
+        'Th_Ngay_sinh.Value = Nhan_vien("Ngay_sinh")
+        'Th_Dia_chi.Text = Nhan_vien("Dia_chi")
+        XL_DONG.Xuat(Nhan_vien, Th_Nhan_vien)
         'Ket xuat Nhan_vien vào Th_Chuoi_nhan_vien (dang xem)
         Dim Chuoi_nhan_vien As String = ""
         Chuoi_nhan_vien &= "Ho ten: " & Nhan_vien("Ho_ten") & vbCrLf
@@ -27,5 +28,9 @@
 
         Th_Chuoi_nhan_vien.Text = Chuoi_nhan_vien
         MessageBox.Show(Chuoi_nhan_vien)
+    End Sub
+
+    Private Sub Th_Nhan_vien_Paint(sender As Object, e As PaintEventArgs) Handles Th_Nhan_vien.Paint
+
     End Sub
 End Class
