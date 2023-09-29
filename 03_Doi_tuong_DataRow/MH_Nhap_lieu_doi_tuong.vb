@@ -1,24 +1,27 @@
-﻿Public Class MH_Nhap_lieu_doi_tuong_co_so
+﻿Public Class MH_Nhap_lieu_doi_tuong
     Private Sub Xl_Dong_y_Click(sender As Object, e As EventArgs) Handles Xl_Dong_y.Click
-        'Kiểm tra dữ liệu nhập
-        'Nếu hợp lệ
-        ' Khai báo ...
-        ' Nhập liệu
-        ' Xử lý ...
-        ' Kết xuất ...
-        'Ngược lại
-        ' Thông báo lỗi
         Dim Chuoi_loi As String = Kiem_tra()
         If Chuoi_loi = "" Then
+            'Khai báo nhân viên Nhan_vien
+            Dim Bang_nhan_vien As New DataTable
+            Bang_nhan_vien.Columns.Add("Ho_ten", GetType(String))
+            Bang_nhan_vien.Columns.Add("Gioi_tinh", GetType(Boolean))
+            Bang_nhan_vien.Columns.Add("Ngay_sinh", GetType(Date))
+            Bang_nhan_vien.Columns.Add("Dia_chi", GetType(String))
+
+            Dim Nhan_vien As DataRow = Bang_nhan_vien.NewRow
+            Bang_nhan_vien.Rows.Add(Nhan_vien)
+            'Nhập liệu cho Nhan_vien
+            XL_DONG.Nhap(Nhan_vien, Th_Nhan_vien)
+            'Xuất thông báo đã nhập Nhan_vien
+            MessageBox.Show(XL_DONG.Tao_Chuoi(Nhan_vien))
             Dim Ho_ten As String = Th_Ho_ten.Text
             Dim Gioi_tinh As Boolean = Th_Gioi_tinh.Checked
             Dim Ngay_sinh As Date = Th_Ngay_sinh.Value
             Dim Dia_chi As String = Th_Dia_chi.Text
-            Dim So_ngay_vang As String = Th_So_ngay_vang.Text
-            Dim Diem_trung_binh As String = Th_Diem_trung_binh.Text
-
             MessageBox.Show("Đã nhập liệu và xử lý")
         Else
+            'Xuất thông báo lỗi
             Dim Thong_bao As String = "Lỗi nhập liệu" & vbCrLf & Chuoi_loi 'vbCrLf là lệnh để xuống dòng
             MessageBox.Show(Thong_bao)
         End If
@@ -31,7 +34,7 @@
         If Not Hop_le Then
             Kq = Kq & "Họ tên phải khác trống" & vbCrLf
         End If
-        'Ngày sinh tương ứng tuổi từ 18 đến 60
+        'Ngày sinh hợp lệ tuổi lao động
         Dim Tuoi As Integer = Today.Year - Th_Ngay_sinh.Value.Year
         Hop_le = Tuoi >= 18 And Tuoi <= 60
         If Not Hop_le Then
@@ -42,25 +45,15 @@
         If Not Hop_le Then
             Kq = Kq & "Địa chỉ phải khác trống" & vbCrLf
         End If
-        'Số ngày vắng là số nguyên >=0
-        Dim n As Integer
-        Hop_le = Integer.TryParse(Th_So_ngay_vang.Text, n) And n >= 0
+        'Giới tính không trống
+        Hop_le = Th_Gioi_tinh.Checked
         If Not Hop_le Then
-            Kq = Kq & "Số ngày vắng là số nguyên >= 0" & vbCrLf
-        End If
-        'Điểm trung bình là số thực >=0 và <=10
-        Dim x As Double
-        Hop_le = Double.TryParse(Th_Diem_trung_binh.Text, x)
-        If Hop_le Then
-            Hop_le = x >= 0 And x <= 10
-        End If
-        If Not Hop_le Then
-            Kq = Kq & "Điểm trung bình là số thực từ 0 đến 10" & vbCrLf
+            Kq = Kq & "Giới tính không được trống" & vbCrLf
         End If
         Return Kq
     End Function
 
-    Private Sub MH_Nhap_lieu_doi_tuong_co_so_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MH_Nhap_lieu_doi_tuong_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

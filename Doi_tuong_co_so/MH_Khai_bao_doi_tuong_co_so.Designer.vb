@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MH_Khai_bao_doi_tuong_co_so
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MH_Khai_bao_doi_tuong_co_so
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Label1 = New Label()
         Label2 = New Label()
@@ -139,23 +139,9 @@ Partial Class MH_Khai_bao_doi_tuong_co_so
         ' 
         ' MH_Khai_bao_doi_tuong_co_so
         ' 
-        AutoScaleDimensions = New SizeF(12F, 25F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1200, 562)
-        Controls.Add(Th_Diem_trung_binh)
-        Controls.Add(Label6)
-        Controls.Add(Th_So_ngay_vang)
-        Controls.Add(Label5)
-        Controls.Add(Th_Ngay_sinh)
-        Controls.Add(Th_Gioi_tinh)
-        Controls.Add(th_Dia_chi)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(th_Ho_ten)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
-        Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Margin = New Padding(4)
+        ClientSize = New Size(800, 450)
         Name = "MH_Khai_bao_doi_tuong_co_so"
         Text = "MH_Khai_bao_doi_tuong_co_so"
         ResumeLayout(False)
