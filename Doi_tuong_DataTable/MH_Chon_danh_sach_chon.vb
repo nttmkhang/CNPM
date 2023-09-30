@@ -1,5 +1,5 @@
-﻿Public Class MH_Ket_xuat_bang_Danh_sach_chon
-    Private Sub MH_Ket_xuat_bang_Danh_sach_chon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class MH_Chon_danh_sach_chon
+    Private Sub MH_Chon_danh_sach_chon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim Bang_loai_phong As New DataTable("LOẠI_PHONG")
         Bang_loai_phong.Columns.Add("Ten", GetType(String))
         Bang_loai_phong.Columns.Add("Don_gia", GetType(Integer))
@@ -18,10 +18,15 @@
         XL_BANG.Xuat(Bang_loai_phong, Danh_sach_chon_loai_phong, "Ten")
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Loai_phong = Loại phòng được chọn
+        Dim Loai_Phong As DataRow = XL_DONG.Chon(Danh_sach_chon_loai_phong)
+        MessageBox.Show(XL_DONG.Tao_Chuoi(Loai_phong))
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Danh_sach_chon_loai_phong_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Danh_sach_chon_loai_phong.SelectedIndexChanged
+        'Loai_phong = Loại phòng được chọn
+        Dim Loai_Phong As DataRow = XL_DONG.Chon(Danh_sach_chon_loai_phong)
+        MessageBox.Show(XL_DONG.Tao_Chuoi(Loai_Phong))
     End Sub
 End Class

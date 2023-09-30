@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <StartupObject>Doi_tuong_DataTable.MH_Them_dong_moi</StartupObject>
+    <StartupObject>Doi_tuong_DataTable.MH_Chon_luoi</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
